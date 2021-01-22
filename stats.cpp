@@ -1,5 +1,7 @@
-#include <algorithm>
 #include "stats.h"
+
+#include <algorithm>
+#include <cmath>
 
 Stats Statistics::ComputeStatistics(const std::vector<float>& numVect) {
     //Implement statistics here
@@ -12,9 +14,9 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& numVect) {
     /*Check Validity*/
     if (numVect.empty())
     {
-        ret_stat.average = NAN;
-        ret_stat.min = NAN;
-        ret_stat.max = NAN;
+        ret_stat.average = std::nan("");
+        ret_stat.min = std::nan("");
+        ret_stat.max = std::nan("");
         return ret_stat;
     }
     else 

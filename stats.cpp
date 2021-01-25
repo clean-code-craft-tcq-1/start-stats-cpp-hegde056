@@ -69,7 +69,7 @@ void StatsAlerter::checkAndAlert(const std::vector<float>& numVect)
     {
         if (i > maxTh)
         { 
-            for (int j = 0; j < alerter.size(); ++j)
+            for (unsigned int j = 0; j < alerter.size(); ++j)
             {
                 this->alerter.at(j)->SetAlert();
             }
